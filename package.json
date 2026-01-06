@@ -1,0 +1,19 @@
+{
+  "name": "learn-and-master-typescript",
+  "version": "1.0.0",
+  "description": "Learn and master TypeScript - Following Maximilian's course",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc --watch",
+    "build": "tsc"
+  },
+  "keywords": [
+    "typescript",
+    "learning"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "ES2015",
+    "lib": ["ES2015", "DOM"],
+    
+    /* Modules */
+    "module": "commonjs",
+    "rootDir": "./",
+    "outDir": "./dist",
+    
+    /* Emit */
+    "removeComments": true,
+    "noEmitOnError": true,
+    
+    /* Interop Constraints */
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    
+    /* Type Checking */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    
+    /* Completeness */
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
