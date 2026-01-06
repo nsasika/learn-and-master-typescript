@@ -37,12 +37,12 @@ console.log('User ID:', userId);
 // Literal types allow you to specify exact values a variable can have
 // Very useful for defining specific allowed values
 
-let status: 'pending' | 'approved' | 'rejected';
-status = 'pending'; // OK
-status = 'approved'; // OK
-// status = 'cancelled'; // Error: Type '"cancelled"' is not assignable
+let taskStatus: 'pending' | 'approved' | 'rejected';
+taskStatus = 'pending'; // OK
+taskStatus = 'approved'; // OK
+// taskStatus = 'cancelled'; // Error: Type '"cancelled"' is not assignable
 
-console.log('Status:', status);
+console.log('Status:', taskStatus);
 
 // ========================================
 // 4. Numeric Literal Types

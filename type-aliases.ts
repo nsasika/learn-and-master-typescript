@@ -126,9 +126,9 @@ console.log('Customer with nested types:', customer);
 // ========================================
 type ID = number | string;
 type Status = 'active' | 'inactive' | 'pending';
-type Response = { success: true; data: any } | { success: false; error: string };
+type ApiResponse = { success: true; data: any } | { success: false; error: string };
 
-function getUserById(id: ID): Response {
+function getUserById(id: ID): ApiResponse {
   if (id === 1 || id === '1') {
     return { success: true, data: { name: 'John' } };
   }
