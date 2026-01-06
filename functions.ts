@@ -147,13 +147,15 @@ function throwError(message: string): never {
   throw new Error(message);
 }
 
+// Note: This function would run forever if called - for demonstration only
 function infiniteLoop(): never {
   while (true) {
-    // Infinite loop
+    // Infinite loop - never returns
+    // DO NOT CALL THIS FUNCTION
   }
 }
 
-// Uncomment to test (will throw error):
+// Uncomment to test error throwing (will throw error):
 // throwError('Something went wrong!');
 
 // ========================================

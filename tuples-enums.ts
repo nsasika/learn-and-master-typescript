@@ -24,6 +24,7 @@ console.log('Person age:', person[1]); // 30
 // 2. Tuple Methods (Limitation)
 // ========================================
 // Note: push() and pop() are allowed on tuples (TypeScript limitation)
+// To prevent this, use readonly tuples: readonly [string, number]
 person.push('extra'); // This is allowed but breaks the tuple contract
 console.log('After push (limitation):', person);
 
