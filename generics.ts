@@ -322,11 +322,14 @@ fetchData<Product>('/api/product/1').then(product => {
 // ========================================
 // 13. Advanced: Conditional Types with Generics
 // ========================================
-type NonNullable<T> = T extends null | undefined ? never : T;
+// Note: TypeScript has a built-in NonNullable<T> utility type
+// This is a custom implementation for learning purposes
 
-type Example1 = NonNullable<string | null>; // string
-type Example2 = NonNullable<number | undefined>; // number
-type Example3 = NonNullable<string | null | undefined>; // string
+type CustomNonNullable<T> = T extends null | undefined ? never : T;
+
+type Example1 = CustomNonNullable<string | null>; // string
+type Example2 = CustomNonNullable<number | undefined>; // number
+type Example3 = CustomNonNullable<string | null | undefined>; // string
 
 let value1: Example1 = 'Hello';
 let value2: Example2 = 42;

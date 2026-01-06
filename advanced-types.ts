@@ -135,21 +135,24 @@ moveAnimal({ type: 'horse', runningSpeed: 30 });
 // 5. Type Casting
 // ========================================
 // Two syntaxes for type casting
-const input1 = document.getElementById('user-input'); // HTMLElement | null
-const input2 = <HTMLInputElement>document.getElementById('email-input'); // Angle bracket syntax (doesn't work in React JSX)
-const input3 = document.getElementById('password-input') as HTMLInputElement; // 'as' syntax (preferred)
+// NOTE: These examples are for learning purposes and will fail in Node.js
+// Uncomment when using in a browser environment
+
+// const input1 = document.getElementById('user-input'); // HTMLElement | null
+// const input2 = <HTMLInputElement>document.getElementById('email-input'); // Angle bracket syntax (doesn't work in React JSX)
+// const input3 = document.getElementById('password-input') as HTMLInputElement; // 'as' syntax (preferred)
 
 // With null check
-const userInput = document.getElementById('username');
-if (userInput) {
-  (userInput as HTMLInputElement).value = 'Max';
-}
+// const userInput = document.getElementById('username');
+// if (userInput) {
+//   (userInput as HTMLInputElement).value = 'Max';
+// }
 
 // Or using non-null assertion operator
-const emailInput = document.getElementById('email')!; // ! means it won't be null
+// const emailInput = document.getElementById('email')!; // ! means it won't be null
 // (emailInput as HTMLInputElement).value = 'test@example.com';
 
-console.log('Type casting examples shown (DOM operations)');
+console.log('Type casting examples (DOM operations commented out for Node.js compatibility)');
 
 // ========================================
 // 6. Index Properties
@@ -273,11 +276,14 @@ move(bird);
 // 11. Mapped Types
 // ========================================
 // Create new types based on old ones
-type Readonly<T> = {
+// Note: TypeScript has built-in Readonly<T> and Partial<T> utility types
+// These are custom implementations for learning purposes
+
+type CustomReadonly<T> = {
   readonly [P in keyof T]: T[P];
 };
 
-type Optional<T> = {
+type CustomOptional<T> = {
   [P in keyof T]?: T[P];
 };
 
@@ -286,8 +292,8 @@ interface Point {
   y: number;
 }
 
-type ReadonlyPoint = Readonly<Point>;
-type OptionalPoint = Optional<Point>;
+type ReadonlyPoint = CustomReadonly<Point>;
+type OptionalPoint = CustomOptional<Point>;
 
 const readonlyPoint: ReadonlyPoint = { x: 10, y: 20 };
 // readonlyPoint.x = 5; // Error: Cannot assign to 'x' because it is a read-only property
